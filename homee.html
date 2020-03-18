@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script> -->
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=yes" />
+	<meta name="viewport"
+		content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+	<!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+	<meta http-equiv="Content-Security-Policy" content="media-src *" />
+	<!--<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />-->
+
+	<link rel="stylesheet" type="text/css" href="css/animate.css" />
+	<link rel="stylesheet" type="text/css" href="css/animation.css" />
+	<link rel="stylesheet" type="text/css" href="css/animator.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<link href='css/footer.css' rel='stylesheet' />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+	<script type="text/javascript" src="js/nearmess.js"></script>
+
+
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link rel="stylesheet" type="text/css" href="css/register.css" />
+
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+	<title>GPC Mobile</title>
+	<style>
+		body,
+		html {
+			height: 100%;
+			margin: 0;
+		}
+
+		.age {
+			pointer-events: none;
+			opacity: 0.5;
+		}
+
+		.bg {
+			/* background: linear-gradient(0deg, #9e9e9e, #5d5d5d); */
+			height: 100%;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+		}
+
+		.bg {
+			background-color: #383f47;
+		}
+
+		td {
+			font-size: 15px;
+			font-weight: 700;
+		}
+
+		.agehide {
+			pointer-events: none;
+			opacity: 0.5;
+		}
+
+		.relhide {
+			pointer-events: none;
+			opacity: 0.5;
+		}
+
+		.img-dang {
+			background-color: gray;
+			width: 100%;
+			height: 200px;
+			border-radius: 5px;
+		}
+		
+	</style>
+</head>
+
+<body class="bg" style="direction:rtl;">
+	<div class="container" style="z-index: 1;padding-bottom: 25px;">
+		<br />
+		<div class="row">
+			<div class="col-lg-1 col-md-1 col-sm-2 col-xs-3">
+				<img src="img/logo.png" onclick="window.location='http://www.gpc.com.eg'"
+					class="img img-responsive center-block">
+			</div>
+			<div class="col-lg-11 col-md-11 col-sm-10 col-xs-9">
+				<br />
+				<h6 style="color:white;font-weight:bold;" class="text-center">The General Petroleum Company</h6>
+				<h4 style="color:white;font-weight:bold;" class="text-center">الشـــــركة العـــــامة للبتـــــرول</h4>
+			</div>
+
+		</div>
+		<hr />
+		<div class="row">
+			<div class="col-xs-4">
+				<a href="cont-us.html" style="color:#fff;font-weight:700;text-align: center;">
+					<h4
+						style="font-weight: 700;text-shadow: 0px 0px 10px #fff;padding: 5px 5px;text-decoration: underline;">
+						تواصل معنا</h4>
+				</a>
+			</div>
+			<div class="col-xs-8 dropdown">
+				<h5 class="dropdown-toggle " data-toggle="dropdown" style="color:white;text-align:-webkit-center;">
+					<!-- <span class="glyphicon glyphicon-user"></span> {{un}} مرحبا</h4> -->
+			</div>
+		</div>
+
+		<table class="icons-container" style="border:none;" width="100%" cellpadding="0" cellspacing="0">
+			<tr style="border:none;">
+				<td width="10%"></td>
+				<td width="35%" class="homeBtn1 fadeIn"
+					onclick="$(this).css('background', 'rgb(12, 91, 125)');window.location='latestN.html';">
+					<i class="fa fa-newspaper-o fa-3x" aria-hidden="true"></i>
+					<h4
+						style="color: white;text-align: -webkit-center;font-weight: bold;font-family: sans-serif;margin-top: 10px;">
+						أخبار الشركة</h4>
+				</td>
+				<td width="10%"></td>
+				<td width="35%" class="homeBtn2 fadeIn"
+					onclick="$(this).css('background', 'rgb(12, 91, 125)');window.location='med_new.html';">
+					<i class="fa fa-user-md fa-3x" aria-hidden="true"></i>
+					<h4
+						style="color: white;text-align: -webkit-center;font-weight: bold;font-family: sans-serif;margin-top: 10px;">
+						الطبية</h4>
+				</td>
+				<td width="10%"></td>
+			</tr>
+			<!-- <tr style="border:none;">
+                <td style="border:none;text-align:-webkit-center;border-left: 20px solid transparent;border-right: 20px solid transparent;"
+                    class="homeBtn" onclick="$(this).css('background', 'rgb(12, 91, 125)');window.location='newsletters.html';">
+                    <div style="width: 80px;height: 80px;overflow: hidden;border: 1px solid 1px solid rgba(255, 255, 255, 0);">
+                        <img class="img-responsive" src="img/newsl.png" />
+                    </div>
+                    <h4 style="color: white;text-align: -webkit-center;font-weight: bold;font-family: sans-serif;margin-top: 10px;">مجلة الشركة</h4>
+                </td>
+
+                <td style="border:none;text-align:-webkit-center;border-left: 20px solid transparent;border-right: 20px solid transparent;"
+                    class="homeBtn" onclick="$(this).css('background', 'rgb(12, 91, 125)');window.location='new.html';">
+                    <div style="width: 80px;height: 80px;overflow: hidden;border: 1px solid 1px solid rgba(255, 255, 255, 0);">
+                        <img class="img-responsive" src="img/sector_pic.png" />
+                    </div>
+                    <h4 style="color: white;text-align: -webkit-center;font-weight: bold;font-family: sans-serif;margin-top: 10px;">اخبار القطاع</h4>
+                </td>
+            </tr>
+            <tr style="border:none;">
+                <td style="border:none;text-align:-webkit-center;border-left: 20px solid transparent;border-right: 20px solid transparent;"
+                    class="homeBtn" onclick="$(this).css('background', 'rgb(12, 91, 125)');window.location='train.html';">
+                    <div style="width: 80px;height: 80px;overflow: hidden;border: 1px solid 1px solid rgba(255, 255, 255, 0);">
+                        <img class="img-responsive" src="img/training.png" />
+                    </div>
+                    <h4 style="color: white;text-align: -webkit-center;font-weight: bold;font-family: sans-serif;margin-top: 10px;">التدريب</h4>
+                </td>
+                <td style="border:none;text-align:-webkit-center;border-left: 20px solid transparent;border-right: 20px solid transparent;"
+                    class="homeBtn" onclick="$(this).css('background', 'rgb(12, 91, 125)');window.location='tripbook.html';">
+                    <div style="width: 80px;height: 80px;overflow: hidden;border: 1px solid 1px solid rgba(255, 255, 255, 0);">
+                        <img class="img-responsive" src="img/trip.png" />
+                    </div>
+                    <h4 style="color: white;text-align: -webkit-center;font-weight: bold;font-family: sans-serif;margin-top: 10px;">حجز رحلات</h4>
+                </td>
+            </tr>
+            <tr style="border:none;">
+                <td style="border:none;text-align:-webkit-center;border-left: 20px solid transparent;border-right: 20px solid transparent;"
+                    class="homeBtn" onclick="$(this).css('background', 'rgb(12, 91, 125)');window.location='syn.html';">
+                    <div style="width: 80px;height: 80px;overflow: hidden;border: 1px solid 1px solid rgba(255, 255, 255, 0);">
+                        <img class="img-responsive" style="margin-top:20px;" src="img/syndicate.png" />
+                    </div>
+                    <h4 style="color: white;text-align: -webkit-center;font-weight: bold;font-family: sans-serif;margin-top: 10px;">النقابات والجمعيات</h4>
+                </td>
+                <td style="border:none;text-align:-webkit-center;border-left: 20px solid transparent;border-right: 20px solid transparent;"
+                    class="homeBtn" onclick="$(this).css('background', 'rgb(12, 91, 125)');window.location='eme.html';">
+                    <div style="width: 80px;height: 80px;overflow: hidden;border: 1px solid 1px solid rgba(255, 255, 255, 0);">
+                        <img class="img-responsive" src="img/eme.png" />
+                    </div>
+                    <h4 style="color: white;text-align: -webkit-center;font-weight: bold;font-family: sans-serif;margin-top: 10px;">الطوارىء</h4>
+                </td>
+            </tr>
+            <tr style="border:none;">
+                <td style="border:none;text-align:-webkit-center;border-left: 20px solid transparent;border-right: 20px solid transparent;"
+                    class="homeBtn" onclick="$(this).css('background', 'rgb(12, 91, 125)');window.location='sites.html';">
+                    <div style="width: 80px;height: 80px;overflow: hidden;border: 1px solid 1px solid rgba(255, 255, 255, 0);">
+                        <img class="img-responsive" src="img/logo1.png" />
+                    </div>
+                    <h4 style="color: white;text-align: -webkit-center;font-weight: bold;font-family: sans-serif;margin-top: 10px;">مواقع هامة</h4>
+                </td>
+                <td style="border:none;text-align:-webkit-center;border-left: 20px solid transparent;border-right: 20px solid transparent;"
+                    class="homeBtn" onclick="$(this).css('background', 'rgb(12, 91, 125)');window.location='nearmiss.html';">
+                    <div style="width: 80px;height: 80px;overflow: hidden;border: 1px solid 1px solid rgba(255, 255, 255, 0);">
+                        <img class="img-responsive" src="img/danger.png" />
+                    </div>
+                    <h4 style="color: white;text-align: -webkit-center;font-weight: bold;font-family: sans-serif;margin-top: 10px;">خطر كامن</h4>
+                </td>
+            </tr>
+            <tr style="border:none;">
+                <td style="border:none;text-align:-webkit-center;border-left: 20px solid transparent;border-right: 20px solid transparent;"
+                    class="homeBtn" onclick="$(this).css('background', 'rgb(12, 91, 125)');window.location='qr.html';">
+                    <div style="width: 80px;height: 80px;overflow: hidden;border: 1px solid 1px solid rgba(255, 255, 255, 0);">
+                        <img class="img-responsive" src="img/frame.png" />
+                    </div>
+                    <h4 style="color: white;text-align: -webkit-center;font-weight: bold;font-family: sans-serif;margin-top: 10px;">الحضور ةالانصراف</h4>
+                </td>
+                <td style="border:none;text-align:-webkit-center;border-left: 20px solid transparent;border-right: 20px solid transparent;"
+                    class="homeBtn" onclick="$(this).css('background', 'rgb(12, 91, 125)');window.location='finan.html';">
+                    <div style="width: 80px;height: 80px;overflow: hidden;border: 1px solid 1px solid rgba(255, 255, 255, 0);">
+                        <img class="img-responsive" src="img/wallet.png" />
+                    </div>
+                    <h4 style="color: white;text-align: -webkit-center;font-weight: bold;font-family: sans-serif;margin-top: 10px;">خدمات مالية</h4>
+                </td>
+            </tr>
+            <tr style="border:none;">
+                <td style="border:none;text-align:-webkit-center;border-left: 20px solid transparent;border-right: 20px solid transparent;"
+                    class="homeBtn" onclick="$(this).css('background', 'rgb(12, 91, 125)');window.location='sites.html';">
+                    <div style="width: 80px;height: 80px;overflow: hidden;border: 1px solid 1px solid rgba(255, 255, 255, 0);">
+                        <img class="img-responsive" src="img/med.png" />
+                    </div>
+                    <h4 style="color: white;text-align: -webkit-center;font-weight: bold;font-family: sans-serif;margin-top: 10px;">أجازة مرضى</h4>
+                </td>
+                <td style="border:none;text-align:-webkit-center;border-left: 20px solid transparent;border-right: 20px solid transparent;"
+                    class="homeBtn" onclick="$(this).css('background', 'rgb(12, 91, 125)');window.location='hr.html';">
+                    <div style="width: 80px;height: 80px;overflow: hidden;border: 1px solid 1px solid rgba(255, 255, 255, 0);">
+                        <img class="img-responsive" src="img/rent.jpg" />
+                    </div>
+                    <h4 style="color: white;text-align: -webkit-center;font-weight: bold;font-family: sans-serif;margin-top: 10px;">خطاب الدخل</h4>
+                </td>
+            </tr>
+            <tr style="border:none;">
+                <td style="border:none;text-align:-webkit-center;border-left: 20px solid transparent;border-right: 20px solid transparent;"
+                    class="homeBtn" onclick="$(this).css('background', 'rgb(12, 91, 125)');window.location='transport.html';">
+                    <div style="width: 80px;height: 80px;overflow: hidden;border: 1px solid 1px solid rgba(255, 255, 255, 0);">
+                        <img class="img-responsive" src="img/bus.png" />
+                    </div>
+                    <h4 style="color: white;text-align: -webkit-center;font-weight: bold;font-family: sans-serif;margin-top: 10px;">خدمة النقل</h4>
+                </td>
+                <td style="border:none;text-align:-webkit-center;border-left: 20px solid transparent;border-right: 20px solid transparent;"
+                    class="homeBtn" onclick="$(this).css('background', 'rgb(12, 91, 125)');window.location='transport.html';">
+                    <div style="width: 80px;height: 80px;overflow: hidden;border: 1px solid 1px solid rgba(255, 255, 255, 0);">
+                        <img class="img-responsive" src="img/hse.jpg" />
+                    </div>
+                    <h4 style="color: white;text-align: -webkit-center;font-weight: bold;font-family: sans-serif;margin-top: 10px;">كتيب السلامة</h4>
+                </td>
+
+            </tr> -->
+		</table>
+		<br />
+		<table class="icons-container" style="border:none;" width="100%" cellpadding="0" cellspacing="0">
+			<tr style="border:none;">
+				<td width="10%"></td>
+				<td width="35%" class="homeBtn3 fadeIn"
+					onclick="$(this).css('background', 'rgb(12, 91, 125)');window.location='latestN.html';">
+					<i class="fa fa-bus fa-3x" aria-hidden="true"></i>
+					<h4
+						style="color: white;text-align: -webkit-center;font-weight: bold;font-family: sans-serif;margin-top: 10px;">
+						خدمة النقل</h4>
+				</td>
+				<td width="10%"></td>
+				<td width="35%" class="homeBtn4 fadeIn"
+					onclick="$(this).css('background', 'rgb(12, 91, 125)');window.location='med_new.html';">
+					<i class="fa fa-bolt fa-3x" aria-hidden="true"></i>
+					<h4
+						style="color: white;text-align: -webkit-center;font-weight: bold;font-family: sans-serif;margin-top: 10px;">
+						الخطر الكامن</h4>
+				</td>
+				<td width="10%"></td>
+			</tr>
+		</table>
+		<br />
+		<table class="icons-container" style="border:none;" width="100%" cellpadding="0" cellspacing="0">
+			<tr style="border:none;">
+				<td width="10%"></td>
+				<td width="35%" class="homeBtn5 fadeIn"
+					onclick="$(this).css('background', 'rgb(12, 91, 125)');window.location='latestN.html';">
+					<i class="fa fa-flash fa-3x" aria-hidden="true"></i>
+					<h4
+						style="color: white;text-align: -webkit-center;font-weight: bold;font-family: sans-serif;margin-top: 10px;">
+						الطوارىء</h4>
+				</td>
+				<td width="10%"></td>
+				<td width="35%" class="homeBtn6 fadeIn"
+					onclick="$(this).css('background', 'rgb(12, 91, 125)');window.location='med_new.html';">
+					<i class="fa fa-users fa-3x" aria-hidden="true"></i>
+					<h4
+						style="color: white;text-align: -webkit-center;font-weight: bold;font-family: sans-serif;margin-top: 10px;">
+						النقابات</h4>
+				</td>
+				<td width="10%"></td>
+			</tr>
+		</table>
+		<br />
+		<table class="icons-container" style="border:none;" width="100%" cellpadding="0" cellspacing="0">
+			<tr style="border:none;">
+				<td width="10%"></td>
+				<td width="35%" class="homeBtn7 fadeIn"
+					onclick="$(this).css('background', 'rgb(12, 91, 125)');window.location='latestN.html';">
+					<i class="fa fa-globe fa-3x" aria-hidden="true"></i>
+					<h4
+						style="color: white;text-align: -webkit-center;font-weight: bold;font-family: sans-serif;margin-top: 10px;">
+						مواقع هامة</h4>
+				</td>
+				<td width="10%"></td>
+				<td width="35%" class="homeBtn8 fadeIn"
+					onclick="$(this).css('background', 'rgb(12, 91, 125)');window.location='med_new.html';">
+					<i class="fa fa-lock fa-3x" aria-hidden="true"></i>
+					<h4
+						style="color: white;text-align: -webkit-center;font-weight: bold;font-family: sans-serif;margin-top: 10px;">
+						كتب السلامة</h4>
+				</td>
+				<td width="10%"></td>
+			</tr>
+		</table>
+		<br />
+		<table class="icons-container" style="border:none;" width="100%" cellpadding="0" cellspacing="0">
+			<tr style="border:none;">
+				<td width="10%"></td>
+				<td width="35%" class="homeBtn9 fadeIn"
+					onclick="$(this).css('background', 'rgb(12, 91, 125)');window.location='latestN.html';">
+					<i class="fa fa-book fa-3x" aria-hidden="true"></i>
+					<h4
+						style="color: white;text-align: -webkit-center;font-weight: bold;font-family: sans-serif;margin-top: 10px;">
+						التدريب</h4>
+				</td>
+				<td width="10%"></td>
+				<td width="35%" class="homeBtn10 fadeIn"
+					onclick="$(this).css('background', 'rgb(12, 91, 125)');window.location='med_new.html';">
+					<i class="fa fa-envelope fa-3x" aria-hidden="true"></i>
+					<h4
+						style="color: white;text-align: -webkit-center;font-weight: bold;font-family: sans-serif;margin-top: 10px;">
+						خطاب الدخل</h4>
+				</td>
+				<td width="10%"></td>
+			</tr>
+		</table>
+	</div>
+	<br />
+	<br />
+	<div class="row">
+
+		<div class="footer footer_div_ar">
+			<a></a>
+			<a onclick="localStorage.setItem('lang','ar');window.location='register.html';">عربى</a>
+			<a onclick="localStorage.setItem('lang','en');window.location='register_en.html';">English</a>
+		</div>
+	</div>
+	</div>
+
+	<script type="text/javascript" src="cordova.js"></script>
+</body>
+
+</html>

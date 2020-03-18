@@ -1,0 +1,779 @@
+﻿<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=yes" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />-->
+    <meta http-equiv="Content-Security-Policy" content="media-src *" />
+
+    <link rel="stylesheet" type="text/css" href="css/animate.css" />
+    <link rel="stylesheet" type="text/css" href="css/animation.css" />
+    <link rel="stylesheet" type="text/css" href="css/animator.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />
+    <!--<link rel="stylesheet" type="text/css" href="css/index.css" />-->
+    <link rel="stylesheet" type="text/css" href="css/home.css" />
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href='css/footer.css' rel='stylesheet' />
+
+
+    <title>GPC Mobile</title>
+    <style>
+        .homeBtn {
+            /*background-color:#E4E4E4;
+    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image: -webkit-gradient(#053c54,#ffffff,#053c54);
+    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-linear-gradient(#053c54,#ffffff,#053c54)
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#eeeeee),color-stop(50%,#053c54), color-stop(50%,#053c54), color-stop(100%,#eeeeee));*/
+  -webkit-box-shadow: 3px 3px 3px 3px #246480;
+    text-align: -webkit-center;
+    box-shadow: 5px 5px 10px;
+    border-radius: 10px;
+    background-color: #418eb0;
+        }
+
+        body,
+        html {
+            height: 100%;
+            margin: 0; //background-color:#0e435a;
+            //
+        }
+
+        .tex {
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+            border: none;
+            color: rgba(255, 255, 255, 1);
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+
+            text-shadow: 4px 4px 6px rgba(0, 150, 255, 0.91);
+        }
+
+        .bg {
+            background: radial-gradient(#4594b7, #0e435a);
+        }
+
+        .bg_two {
+            background: radial-gradient(hsl(198, 100%, 27%) 4%, hsl(198, 100%, 18%) 9%, hsla(24.3, 100%, 20%, 0) 9%) 0 0,
+            radial-gradient(hsl(198, 100%, 27%) 4%, hsl(198, 100%, 18%) 8%, hsla(24.3, 100%, 20%, 0) 10%) 50px 50px,
+            radial-gradient(hsla(198, 100%, 30%, 0.8) 20%, hsla(72.6, 100%, 20%, 0)) 50px 0,
+            radial-gradient(hsla(198, 100%, 30%, 0.8) 20%, hsla(72.6, 100%, 20%, 0)) 0 50px,
+            radial-gradient(hsla(198, 100%, 20%, 1) 35%, hsla(72.6, 100%, 20%, 0) 60%) 50px 0,
+            radial-gradient(hsla(198, 100%, 20%, 1) 35%, hsla(72.6, 100%, 20%, 0) 60%) 100px 50px,
+            radial-gradient(hsla(198, 100%, 15%, 0.7), hsla(72.6, 100%, 20%, 0)) 0 0,
+            radial-gradient(hsla(198, 100%, 15%, 0.7), hsla(72.6, 100%, 20%, 0)) 50px 50px,
+            linear-gradient(45deg, hsla(198, 100%, 20%, 0) 49%, hsla(72.6, 100%, 0%, 1) 50%, hsla(24.3, 100%, 20%, 0) 70%) 0 0,
+            linear-gradient(-45deg, hsla(198, 100%, 20%, 0) 49%, hsla(72.6, 100%, 0%, 1) 50%, hsla(24.3, 100%, 20%, 0) 70%) 0 0;
+            background-color: #11506b;
+            background-size: 100px 102px;
+        }
+
+        .bg_two {
+            background-color: #11506b;
+            background-image: radial-gradient(white, rgba(255, 255, 255, .2) 2px, transparent 40px),
+            radial-gradient(white, rgba(255, 255, 255, .15) 1px, transparent 30px),
+            radial-gradient(white, rgba(255, 255, 255, .1) 2px, transparent 40px),
+            radial-gradient(rgba(255, 255, 255, .4), rgba(255, 255, 255, .1) 2px, transparent 30px);
+            background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+            background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+        }
+
+        .icons-container tr td div {
+            margin-top: 10px;
+        }
+    </style>
+
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins');
+
+    /* BASIC */
+
+    /*html {
+  background-color: #56baed;
+  height: 100%;
+	margin: 0;
+}*/
+
+
+    body {
+      font-family: "Poppins", sans-serif;
+      /*height: 100vh;*/
+      height: 100%;
+      /*margin: 0;*/
+    }
+
+    .bg {
+      background: radial-gradient(#4594b7, #0e435a);
+      /*height: 100%;*/
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-size: cover;
+    }
+
+    a {
+      /*color: #92badd;*/
+      display: inline-block;
+      text-decoration: none;
+      font-weight: 400;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      display: inline-block;
+      margin: 40px 8px 10px 8px;
+      color: #cccccc;
+    }
+
+    /* STRUCTURE */
+
+    .wrapper {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      min-height: 100%;
+      padding: 20px;
+    }
+
+    #formContent {
+      -webkit-border-radius: 10px 10px 10px 10px;
+      border-radius: 10px 10px 10px 10px;
+      background: #fff;
+      padding: 30px;
+      width: 90%;
+      max-width: 450px;
+      position: relative;
+      padding: 0px;
+      -webkit-box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+      box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    #formFooter {
+      background-color: #f6f6f6;
+      border-top: 1px solid #dce8f1;
+      padding: 25px;
+      text-align: center;
+      -webkit-border-radius: 0 0 10px 10px;
+      border-radius: 0 0 10px 10px;
+    }
+
+
+
+    /* TABS */
+
+    h2.inactive {
+      color: #cccccc;
+    }
+
+    h2.active {
+      color: #0d0d0d;
+      border-bottom: 2px solid #5fbae9;
+    }
+
+    /* FORM TYPOGRAPHY*/
+
+    input[type=button],
+    input[type=submit],
+    input[type=reset] {
+      background-color: #56baed;
+      border: none;
+      color: white;
+      padding: 15px 80px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 13px;
+      -webkit-box-shadow: 0 10px 30px 0 rgba(95, 186, 233, 0.4);
+      box-shadow: 0 10px 30px 0 rgba(95, 186, 233, 0.4);
+      -webkit-border-radius: 5px 5px 5px 5px;
+      border-radius: 5px 5px 5px 5px;
+      margin: 5px 20px 40px 20px;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+    }
+
+    input[type=button]:hover,
+    input[type=submit]:hover,
+    input[type=reset]:hover {
+      background-color: #39ace7;
+    }
+
+    input[type=button]:active,
+    input[type=submit]:active,
+    input[type=reset]:active {
+      -moz-transform: scale(0.95);
+      -webkit-transform: scale(0.95);
+      -o-transform: scale(0.95);
+      -ms-transform: scale(0.95);
+      transform: scale(0.95);
+    }
+
+    input[type=number] {
+      background-color: #f6f6f6;
+      border: none;
+      color: #0d0d0d;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 5px;
+      width: 85%;
+      border: 2px solid #f6f6f6;
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      -ms-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
+      -webkit-border-radius: 5px 5px 5px 5px;
+      border-radius: 5px 5px 5px 5px;
+    }
+
+    input[type=number]:focus {
+      background-color: #fff;
+      border-bottom: 2px solid #5fbae9;
+    }
+
+    input[type=number]:placeholder {
+      color: #cccccc;
+    }
+
+    input[type=text] {
+      background-color: #f6f6f6;
+      border: none;
+      color: #0d0d0d;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 5px;
+      width: 85%;
+      border: 2px solid #f6f6f6;
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      -ms-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
+      -webkit-border-radius: 5px 5px 5px 5px;
+      border-radius: 5px 5px 5px 5px;
+    }
+
+    input[type=text]:focus {
+      background-color: #fff;
+      border-bottom: 2px solid #5fbae9;
+    }
+
+    input[type=text]:placeholder {
+      color: #cccccc;
+    }
+
+    input[type=password] {
+      background-color: #f6f6f6;
+      border: none;
+      color: #0d0d0d;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 5px;
+      width: 85%;
+      border: 2px solid #f6f6f6;
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      -ms-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
+      -webkit-border-radius: 5px 5px 5px 5px;
+      border-radius: 5px 5px 5px 5px;
+    }
+
+    input[type=password]:focus {
+      background-color: #fff;
+      border-bottom: 2px solid #5fbae9;
+    }
+
+    input[type=password]:placeholder {
+      color: #cccccc;
+    }
+
+    /* ANIMATIONS */
+
+    /* Simple CSS3 Fade-in-down Animation */
+    .fadeInDown {
+      -webkit-animation-name: fadeInDown;
+      animation-name: fadeInDown;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+    }
+
+    @-webkit-keyframes fadeInDown {
+      0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+      }
+
+      100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+      }
+    }
+
+    @keyframes fadeInDown {
+      0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+      }
+
+      100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+      }
+    }
+
+    /* Simple CSS3 Fade-in Animation */
+    @-webkit-keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @-moz-keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .fadeIn {
+      opacity: 0;
+      -webkit-animation: fadeIn ease-in 1;
+      -moz-animation: fadeIn ease-in 1;
+      animation: fadeIn ease-in 1;
+
+      -webkit-animation-fill-mode: forwards;
+      -moz-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+
+      -webkit-animation-duration: 1s;
+      -moz-animation-duration: 1s;
+      animation-duration: 1s;
+    }
+
+    .fadeIn.first {
+      -webkit-animation-delay: 0.4s;
+      -moz-animation-delay: 0.4s;
+      animation-delay: 0.4s;
+    }
+
+    .fadeIn.second {
+      -webkit-animation-delay: 0.6s;
+      -moz-animation-delay: 0.6s;
+      animation-delay: 0.6s;
+    }
+
+    .fadeIn.third {
+      -webkit-animation-delay: 0.8s;
+      -moz-animation-delay: 0.8s;
+      animation-delay: 0.8s;
+    }
+
+    .fadeIn.fourth {
+      -webkit-animation-delay: 1s;
+      -moz-animation-delay: 1s;
+      animation-delay: 1s;
+    }
+
+    /* Simple CSS3 Fade-in Animation */
+    .underlineHover:after {
+      display: block;
+      left: 0;
+      bottom: -10px;
+      width: 0;
+      height: 2px;
+      background-color: #56baed;
+      background: radial-gradient(#4594b7, #0e435a);
+      content: "";
+      transition: width 0.2s;
+    }
+
+    .underlineHover:hover {
+      color: #0d0d0d;
+    }
+
+    .underlineHover:hover:after {
+      width: 100%;
+    }
+
+    /* OTHERS */
+
+    *:focus {
+      outline: none;
+    }
+
+    #icon {
+      width: 30%;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    /* .homeBtn.first {
+
+        background: radial-gradient(#b47327, #f59910);
+    }
+
+    .homeBtn.second {
+
+        background: radial-gradient(#275fb4, #10a1f5);
+    }
+
+    .homeBtn.third {
+
+background: radial-gradient(#27b49d, #10f5d7);
+}
+
+.homeBtn.fourth {
+
+background: radial-gradient(#5d27b469, #6810f5);
+}
+
+.homeBtn.fifth {
+
+background: radial-gradient(#277cb4, #10c0f5);
+}
+.homeBtn.sixth {
+
+background: radial-gradient(#b44827, #cf6121);
+}
+.homeBtn.seven {
+
+background: radial-gradient(#27b47279, #21cf8c);
+}
+.homeBtn.eight {
+
+background: radial-gradient(#b4273f79, #cf214c);
+}
+
+.homeBtn.nine {
+
+background: radial-gradient(#cfc42279, #c3cf21);
+}
+
+.homeBtn.ten {
+
+background: radial-gradient(#6d22cf79, #9821cf);
+}
+
+.homeBtn.eleven {
+
+background: radial-gradient(#3c3e4179, #979a9c);
+}
+
+.homeBtn.twelve {
+
+background: radial-gradient(#229ecf79, #219ecf);
+}
+
+.homeBtn.thirteen {
+
+background: radial-gradient(#cf22b279, #c058bb);
+}
+.homeBtn.fourteen {
+
+background: radial-gradient(#2242cf79, #366bcc);
+}
+.homeBtn.fifteen {
+
+background: radial-gradient(#22cf9b79, #21cf8c);
+}
+.homeBtn.sixteen {
+
+background: radial-gradient(#cfa12279, #cc9d36cb);
+} */
+
+
+
+
+  </style>
+</head>
+
+<body class="bg" style="direction:rtl;" ng-app="app1" ng-controller="ctrl1">
+    <br/>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-1 col-md-1 col-sm-2 col-xs-3">
+                <img src="img/logo.png" onclick="window.location='http://www.gpc.com.eg'" class="img img-responsive center-block">
+            </div>
+            <div class="col-lg-11 col-md-11 col-sm-10 col-xs-9">
+                <br/>
+                <h6 style="color:white;font-weight:bold;" class="text-center">The General Petroleum Company</h6>
+                <h4 style="color:white;font-weight:bold;" class="text-center">الشـــــركة العـــــامة للبتـــــرول</h4>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-xs-4">
+                <br/>
+                <a href="cont-us.html" style="color:#fff;font-weight:700;text-align: center;">
+                    <h4 style="font-weight: 700;text-shadow: 0px 0px 10px #fff;padding: 5px 5px;text-decoration: underline;">تواصل معنا</h4>
+                </a>
+            </div>
+            <div class="col-xs-8 dropdown">
+                <h5 class="dropdown-toggle " data-toggle="dropdown" style="color:white;text-align:-webkit-center;">
+                    <span class="glyphicon glyphicon-user"></span> {{un}} مرحبا</h4>
+            </div>
+        </div>
+
+        <table class="icons-container" style="border:none;" width="100%" cellpadding="0" cellspacing="0">
+            <tr style="border:none;">
+                <td width="45%" class="homeBtn first" onclick="$(this).css('background', 'rgb(12, 91, 125)');window.location='latestN.html';">
+                    <div style="width: 80px;height: 80px;overflow: hidden;border: 1px solid 1px solid rgba(255, 255, 255, 0);border-radius: 50px;margin-left: 10px;background-color:#d5ccbf">
+                        <img class="img-responsive" src="img/news.png" />
+                    </div>
+                    <h4 style="color: white;text-align: -webkit-center;font-weight: bold;font-family: sans-serif;margin-top: 10px;">أخبار الشركة</h4>
+                </td>
+                <td width="10%"></td>
+                <td width="45%"
+                    class="homeBtn second" onclick="$(this).css('background', 'rgb(12, 91, 125)');window.location='med_new.html';">
+                    <div style="width: 80px;height: 80px;overflow: hidden;border: 1px solid 1px solid rgba(255, 255, 255, 0);">
+                        <img class="img-responsive" style="border-radius: 50%;width: 80px;height: 80px;" src="img/med.png" />
+                    </div>
+                    <h4 style="color: white;text-align: -webkit-center;font-weight: bold;font-family: sans-serif;margin-top: 10px;">الطبية</h4>
+                </td>
+            </tr>
+            <!-- <tr style="border:none;">
+                <td 
+                    class="homeBtn third" onclick="$(this).css('background', 'rgb(12, 91, 125)');window.location='newsletters.html';">
+                    <div style="width: 80px;height: 80px;overflow: hidden;border: 1px solid 1px solid rgba(255, 255, 255, 0);">
+                        <img class="img-responsive" src="img/newsl.png" />
+                    </div>
+                    <h4 style="color: white;text-align: -webkit-center;font-weight: bold;font-family: sans-serif;margin-top: 10px;">مجلة الشركة</h4>
+                </td>
+                <td 
+                    class="homeBtn fourth" onclick="$(this).css('background', 'rgb(12, 91, 125)');window.location='new.html';">
+                    <div style="width: 80px;height: 80px;overflow: hidden;border: 1px solid 1px solid rgba(255, 255, 255, 0);">
+                        <img class="img-responsive" src="img/sector_pic.png" />
+                    </div>
+                    <h4 style="color: white;text-align: -webkit-center;font-weight: bold;font-family: sans-serif;margin-top: 10px;">اخبار القطاع</h4>
+                </td>
+            </tr>
+            <tr style="border:none;">
+                <td 
+                    class="homeBtn fifth" onclick="$(this).css('background', 'rgb(12, 91, 125)');window.location='train.html';">
+                    <div style="width: 80px;height: 80px;overflow: hidden;border: 1px solid 1px solid rgba(255, 255, 255, 0);">
+                        <img class="img-responsive" src="img/training.png" />
+                    </div>
+                    <h4 style="color: white;text-align: -webkit-center;font-weight: bold;font-family: sans-serif;margin-top: 10px;">التدريب</h4>
+                </td>
+                <td 
+                    class="homeBtn sixth" onclick="$(this).css('background', 'rgb(12, 91, 125)');window.location='tripbook.html';">
+                    <div style="width: 80px;height: 80px;overflow: hidden;border: 1px solid 1px solid rgba(255, 255, 255, 0);">
+                        <img class="img-responsive" src="img/trip.png" />
+                    </div>
+                    <h4 style="color: white;text-align: -webkit-center;font-weight: bold;font-family: sans-serif;margin-top: 10px;">حجز رحلات</h4>
+                </td>
+            </tr>
+            <tr style="border:none;">
+                <td 
+                    class="homeBtn seven" onclick="$(this).css('background', 'rgb(12, 91, 125)');window.location='syn.html';">
+                    <div style="width: 80px;height: 80px;overflow: hidden;border: 1px solid 1px solid rgba(255, 255, 255, 0);">
+                        <img class="img-responsive" style="margin-top:20px;" src="img/syndicate.png" />
+                    </div>
+                    <h4 style="color: white;text-align: -webkit-center;font-weight: bold;font-family: sans-serif;margin-top: 10px;">النقابات والجمعيات</h4>
+                </td>
+                <td
+                    class="homeBtn eight" onclick="$(this).css('background', 'rgb(12, 91, 125)');window.location='eme.html';">
+                    <div style="width: 80px;height: 80px;overflow: hidden;border: 1px solid 1px solid rgba(255, 255, 255, 0);">
+                        <img class="img-responsive" src="img/eme.png" />
+                    </div>
+                    <h4 style="color: white;text-align: -webkit-center;font-weight: bold;font-family: sans-serif;margin-top: 10px;">الطوارىء</h4>
+                </td>
+            </tr>
+            <tr style="border:none;">
+                <td
+                    class="homeBtn nine" onclick="$(this).css('background', 'rgb(12, 91, 125)');window.location='sites.html';">
+                    <div style="width: 80px;height: 80px;overflow: hidden;border: 1px solid 1px solid rgba(255, 255, 255, 0);">
+                        <img class="img-responsive" src="img/logo1.png" />
+                    </div>
+                    <h4 style="color: white;text-align: -webkit-center;font-weight: bold;font-family: sans-serif;margin-top: 10px;">مواقع هامة</h4>
+                </td>
+                <td
+                    class="homeBtn ten" onclick="$(this).css('background', 'rgb(12, 91, 125)');window.location='nearmiss.html';">
+                    <div style="width: 80px;height: 80px;overflow: hidden;border: 1px solid 1px solid rgba(255, 255, 255, 0);">
+                        <img class="img-responsive" src="img/danger.png" />
+                    </div>
+                    <h4 style="color: white;text-align: -webkit-center;font-weight: bold;font-family: sans-serif;margin-top: 10px;">خطر كامن</h4>
+                </td>
+            </tr>
+            <tr style="border:none;">
+                <td
+                    class="homeBtn eleven" onclick="$(this).css('background', 'rgb(12, 91, 125)');window.location='qr.html';">
+                    <div style="width: 80px;height: 80px;overflow: hidden;border: 1px solid 1px solid rgba(255, 255, 255, 0);">
+                        <img class="img-responsive" src="img/frame.png" />
+                    </div>
+                    <h4 style="color: white;text-align: -webkit-center;font-weight: bold;font-family: sans-serif;margin-top: 10px;">الحضور ةالانصراف</h4>
+                </td>
+                <td
+                    class="homeBtn twelve" onclick="$(this).css('background', 'rgb(12, 91, 125)');window.location='finan.html';">
+                    <div style="width: 80px;height: 80px;overflow: hidden;border: 1px solid 1px solid rgba(255, 255, 255, 0);">
+                        <img class="img-responsive" src="img/wallet.png" />
+                    </div>
+                    <h4 style="color: white;text-align: -webkit-center;font-weight: bold;font-family: sans-serif;margin-top: 10px;">خدمات مالية</h4>
+                </td>
+            </tr>
+            <tr style="border:none;">
+                <td
+                    class="homeBtn thirteen" onclick="$(this).css('background', 'rgb(12, 91, 125)');window.location='sites.html';">
+                    <div style="width: 80px;height: 80px;overflow: hidden;border: 1px solid 1px solid rgba(255, 255, 255, 0);">
+                        <img class="img-responsive" src="img/med.png" />
+                    </div>
+                    <h4 style="color: white;text-align: -webkit-center;font-weight: bold;font-family: sans-serif;margin-top: 10px;">أجازة مرضى</h4>
+                </td>
+                <td
+                    class="homeBtn fourteen" onclick="$(this).css('background', 'rgb(12, 91, 125)');window.location='hr.html';">
+                    <div style="width: 80px;height: 80px;overflow: hidden;border: 1px solid 1px solid rgba(255, 255, 255, 0);">
+                        <img class="img-responsive" src="img/rent.jpg" />
+                    </div>
+                    <h4 style="color: white;text-align: -webkit-center;font-weight: bold;font-family: sans-serif;margin-top: 10px;">خطاب الدخل</h4>
+                </td>
+            </tr>
+            <tr style="border:none;">
+                <td
+                    class="homeBtn fifteen" onclick="$(this).css('background', 'rgb(12, 91, 125)');window.location='transport.html';">
+                    <div style="width: 80px;height: 80px;overflow: hidden;border: 1px solid 1px solid rgba(255, 255, 255, 0);">
+                        <img class="img-responsive" src="img/bus.png" />
+                    </div>
+                    <h4 style="color: white;text-align: -webkit-center;font-weight: bold;font-family: sans-serif;margin-top: 10px;">خدمة النقل</h4>
+                </td>
+                <td
+                    class="homeBtn sixteen" onclick="$(this).css('background', 'rgb(12, 91, 125)');window.location='transport.html';">
+                    <div style="width: 80px;height: 80px;overflow: hidden;border: 1px solid 1px solid rgba(255, 255, 255, 0);">
+                        <img class="img-responsive" src="img/hse.jpg" />
+                    </div>
+                    <h4 style="color: white;text-align: -webkit-center;font-weight: bold;font-family: sans-serif;margin-top: 10px;">كتيب السلامة</h4>
+                </td>
+
+            </tr> -->
+        </table>
+    </div>
+    <br/>
+    <br/>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">برجاء عمل تحديث</h4>
+                </div>
+                <div class="modal-body">
+                    <h5>هذا الاصدار قديم يرجى تحديث من
+                        <br>
+                        <a href='https://play.google.com/store/apps/details?id=eg.com.gpc.gpcmobileapp'>gpcmobileapp</a>
+                    </h5>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="footer footer_div_ar">
+        <a></a>
+        <a onclick="localStorage.setItem('lang','ar');window.location='home.html';">عربى</a>
+        <a onclick="localStorage.setItem('lang','en');window.location='home_en.html';">English</a>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/home.js"></script>
+    <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.9.2.custom.min.js"></script>
+
+    <script type="text/javascript" src="js/jquery.touchSwipe.js"></script>
+    <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('deviceready', onDeviceReady, false);
+        function onDeviceReady() {
+            // alert(AppVersion.version);
+            $.ajax({
+                url: "https://gpcnew.com/larademy/laravel/version",
+                data: {
+                    "version": AppVersion.version
+                },
+                method: "POST",
+                type: 'POST',
+                success: function (data) {
+                    if (JSON.parse(data) == "0") {
+                        $("#myModal").modal('show');
+                    }
+                },
+                error: function (msg) { }
+            });
+            document.addEventListener("backbutton", function (e) {
+                e.preventDefault();
+                navigator.app.exitApp();
+            }, false);
+            window.FirebasePlugin.onTokenRefresh(function (token) {
+                window.FirebasePlugin.subscribe("all_gpc");
+            }, function (error) {
+                console.error(error);
+            });
+            window.FirebasePlugin.onNotificationOpen(function (notification) {
+                window.location = "latestN.html";
+            }, function (error) {
+                console.error(error);
+            });
+        }
+    </script>
+</body>
+
+</html>
